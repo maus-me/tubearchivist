@@ -91,12 +91,12 @@ class SearchProcess:
         if "subtitles" in video_dict:
             for idx, _ in enumerate(video_dict["subtitles"]):
                 url = video_dict["subtitles"][idx]["media_url"]
-                video_dict["subtitles"][idx]["media_url"] = f"/media/{url}"
+                video_dict["subtitles"][idx]["media_url"] = f"/vmedia/{url}"
 
         video_dict.update(
             {
                 "channel": channel,
-                "media_url": f"/media/{media_url}",
+                "media_url": f"/vmedia/{media_url}",
                 "vid_last_refresh": vid_last_refresh,
                 "published": published,
                 "vid_thumb_url": f"{self.CACHE_DIR}/{vid_thumb_url}",
